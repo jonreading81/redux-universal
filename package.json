@@ -1,10 +1,8 @@
 {
   "name": "react-redux-universal",
   "description": "React Redux Uinversal Boilerplate",
-  "version": "0.0.1",  
-  "keywords": [
-  
-  ],
+  "version": "0.0.1",
+  "keywords": [],
   "main": "bin/server.js",
   "scripts": {
     "start": "concurrent --kill-others \"npm run start-prod\" \"npm run start-prod-api\"",
@@ -134,6 +132,7 @@
     "clean-webpack-plugin": "^0.1.6",
     "concurrently": "^0.1.1",
     "css-loader": "^0.23.1",
+    "enzyme": "^2.3.0",
     "eslint": "1.10.3",
     "eslint-config-airbnb": "0.1.0",
     "eslint-loader": "^1.0.0",
@@ -148,6 +147,7 @@
     "karma-mocha": "^0.2.0",
     "karma-mocha-reporter": "^1.1.1",
     "karma-phantomjs-launcher": "^0.2.1",
+    "karma-sinon": "^1.0.5",
     "karma-sourcemap-loader": "^0.3.5",
     "karma-webpack": "^1.7.0",
     "mocha": "^2.3.3",
@@ -155,7 +155,8 @@
     "phantomjs": "^1.9.18",
     "phantomjs-polyfill": "0.0.1",
     "react-a11y": "^0.2.6",
-    "react-addons-test-utils": "^0.14.0",
+    "react-addons-test-utils": "^0.14.8",
+    "react-dom": "^0.14.8",
     "react-transform-catch-errors": "^1.0.0",
     "react-transform-hmr": "^1.0.1",
     "redbox-react": "^1.1.1",
@@ -163,7 +164,7 @@
     "redux-devtools-dock-monitor": "^1.0.0-beta-3",
     "redux-devtools-log-monitor": "^1.0.0-beta-3",
     "sass-loader": "^3.1.2",
-    "sinon": "^1.17.2",
+    "sinon": "^1.17.4",
     "strip-loader": "^0.1.0",
     "style-loader": "^0.13.0",
     "timekeeper": "0.0.5",

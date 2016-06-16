@@ -7,7 +7,7 @@ module.exports = function (config) {
 
     singleRun: !!process.env.CI,
 
-    frameworks: [ 'mocha' ],
+    frameworks: ['mocha', 'sinon'],
 
     files: [
       './node_modules/phantomjs-polyfill/bind-polyfill.js',
@@ -25,7 +25,8 @@ module.exports = function (config) {
       require("karma-mocha"),
       require("karma-mocha-reporter"),
       require("karma-phantomjs-launcher"),
-      require("karma-sourcemap-loader")
+      require("karma-sourcemap-loader"),
+      require("karma-sinon"),
     ],
 
     webpack: {
@@ -39,11 +40,21 @@ module.exports = function (config) {
           { test: /\.scss$/, loader: 'style!css?modules&importLoaders=2&sourceMap&localIdentName=[local]___[hash:base64:5]!autoprefixer?browsers=last 2 version!sass?outputStyle=expanded&sourceMap' }
         ]
       },
+
+      externals: {
+        jsdom: 'window',
+        cheerio: 'window',
+        'react/lib/ExecutionEnvironment': true,
+        'react/lib/ReactContext': 'window',
+        'text-encoding': 'window'
+      },
+
       resolve: {
         modulesDirectories: [
           'src',
           'node_modules'
         ],
+     
         extensions: ['', '.json', '.js']
       },
       plugins: [
