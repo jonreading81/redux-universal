@@ -16,3 +16,8 @@
 * [react-helmet](https://github.com/nfl/react-helmet) 
 * [webpack-isomorphic-tools](https://github.com/halt-hammerzeit/webpack-isomorphic-tools)
 * [mocha](https://mochajs.org/) 
+* [chai](http://chaijs.com/) 
+* [sinon](http://sinonjs.org/) 
+* [karma](https://karma-runner.github.io/) 
+* [enzyme](https://github.com/airbnb/enzyme) 
+
